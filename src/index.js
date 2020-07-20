@@ -4,9 +4,11 @@ import './index.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
+import { BrowserRouter as Router } from ‘react-router-dom’;
 
 ReactDOM.render(
   <React.StrictMode>
+	<Router basename={process.env.PUBLIC_URL}>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
