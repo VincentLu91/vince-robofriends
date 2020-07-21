@@ -58,7 +58,7 @@ class App extends Component {
 		<h1>Loading</h1> :
 		(
 				<div className='tc'>
-					<Header /> // we replaced <h1 className='f1'>RoboFriends</h1> with header component to optimize it to be run once
+					<Header />
 					<SearchBox searchChange={onSearchChange}/>
 					<Scroll>
 						<ErrorBoundary>
