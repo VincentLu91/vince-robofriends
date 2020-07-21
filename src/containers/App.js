@@ -7,6 +7,7 @@ import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';
 import './App.css';
 import { setSearchField, requestRobots } from '../actions';
+import Header from '../components/Header';
 
 const mapStateToProps = state => {
 	return {
@@ -57,7 +58,7 @@ class App extends Component {
 		<h1>Loading</h1> :
 		(
 				<div className='tc'>
-					<h1 className='f2'>RoboFriends</h1>
+					<Header /> // we replaced <h1 className='f1'>RoboFriends</h1> with header component to optimize it to be run once
 					<SearchBox searchChange={onSearchChange}/>
 					<Scroll>
 						<ErrorBoundary>
