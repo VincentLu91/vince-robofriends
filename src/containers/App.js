@@ -26,7 +26,7 @@ class App extends Component {
 		super()
 		this.state = { // state describes our app.
 			robots: [],
-			searchfield: ''
+			//searchfield: ''
 		}
 	}
 	
@@ -35,22 +35,23 @@ class App extends Component {
 			.then(response => response.json())
 			.then(users => this.setState({ robots: users}));
 	}
-	
+	/*
 	onSearchChange = (event) => {
 		this.setState({searchfield: event.target.value}) // set the state of searchfield
 	}
-	
+	*/
 	render() {
-		const { robots, searchfield } = this.state
+		const { robots } = this.state
+		const { searchField, onSearchChange } = this.props;
 		const filteredRobots = robots.filter(robot => {
-			return robot.name.toLowerCase().includes(searchfield.toLowerCase());
+			return robot.name.toLowerCase().includes(searchField.toLowerCase());
 		})
 		return !robots.length ?
 		<h1>Loading</h1> :
 		(
 				<div className='tc'>
 					<h1 className='f2'>RoboFriends</h1>
-					<SearchBox searchChange={this.onSearchChange}/>
+					<SearchBox searchChange={onSearchChange}/>
 					<Scroll>
 						<ErrorBoundary>
 							<CardList robots={filteredRobots} />
