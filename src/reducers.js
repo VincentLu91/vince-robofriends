@@ -21,7 +21,6 @@ export const searchRobots = (state=initialStateSearch, action={}) => {
 const initialStateRobots = {
 	isPending: false,
 	robots: [],
-	error: ''
 }
 
 // use them for specific use cases
