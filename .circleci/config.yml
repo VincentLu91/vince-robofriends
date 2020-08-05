@@ -24,7 +24,7 @@ jobs:
             - run: echo "helllllo"
 workflows:
     version: 2
-    build_test_and_lint:
+    build-test-and-lint:
         jobs:
             - build
             - hithere
