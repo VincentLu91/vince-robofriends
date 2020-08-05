@@ -1,5 +1,5 @@
 import React from 'react';
-import Counterbutton from './Counterbutton';
+import Counterbutton from './CounterButton';
 import { shallow } from 'enzyme';
 
 it('expect to render Counterbutton component', () => {
